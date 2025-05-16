@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div>
+	<h1>JavaScript Templates</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var text = `Hello World!`;
+		document.getElementById("main").innerHTML = text;
+
+	</script>
+</div>
+
+<div>
+	<h1>JavaScript Templates</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var firstName = "John";
+		var lastName = "Doe";
+
+		var text = `Welcome ${firstName} ${lastName}!`;
+		document.getElementById("demo").innerHTML = text;
+
+	</script>
+</div>
+
+<div>
+	<h1>JavaScript Templates</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var price = 10;
+		var VAT = 0.25;
+		var total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+		document.getElementById("class").innerHTML = total;
+
+	</script>
+</div>
+
+<div>
+	<h1>JavaScript Templates</h1>
+
+	<p id="content"></p>
+
+	<script>
+		var header = "Template Strings";
+		var tags = ["template strings", "javascript", "es6"];
+
+		var html = `<h2>${header}</h2><ul>`;
+
+		for (const x of tags) {
+			html += `<li>${x}</li>`;
+		}
+
+		html += `</ul>`;
+		document.getElementById("content").innerHTML = html;
+
+	</script>
+</div>
+</body>
+</html>
