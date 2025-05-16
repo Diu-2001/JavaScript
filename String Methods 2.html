@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div>
+	<h1>The trim() Method</h1>
+
+	<p id="show"></p>
+
+	<script>
+		var text1 = "       Hello World        ";
+		var text2 = text1.trimStart();
+		document.getElementById('show').innerHTML = "Length text1 =" + text1.length + " <br> Length text2 = " + text2.length;
+	</script>
+</div>
+
+<div>
+	<h1>The trim() Method</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var text1 = "        Hello World        ";
+		var text2 = text1.trimEnd();
+		document.getElementById('demo').innerHTML = "Length text1 =" + text1.length + " <br> Length text2 = " + text2.length;
+	</script>
+</div>
+
+<div>
+	<h1>The padStart() Method</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var text = "5";
+	 text = text.padStart(4,"0");
+		document.getElementById('main').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h1>The padEnd() Method</h1>
+
+	<p id="new"></p>
+
+	<script>
+		var numb = "5";
+		var text = numb.toString();
+		document.getElementById('new').innerHTML = text.padEnd(4,"x");
+	</script>
+</div>
+
+<div>
+	<h1>The repeat() Method</h1>
+
+	<p id="few"></p>
+
+	<script>
+		var text = "Hello World!  ";
+		var result = text.repeat(2);
+		document.getElementById('few').innerHTML = result;
+	</script>
+</div>
+
+<div>
+	<h1>The replace() Method</h1>
+<button onclick="myFunction()">Try It!</button>
+	<p id="menu">Please Visit Taj Mahal!</p>
+
+	<script>
+		function myFunction(){
+			var text = 
+			document.getElementById("menu").innerHTML;
+
+			document.getElementById("menu").innerHTML = text.replace("Taj Mahal", "India Gate");
+		}
+	</script>
+</div>
+
+<div>
+	<h1>The replaceAll() Method</h1>
+	<p id="content"></p>
+
+	<script>
+			var text = "I love cats. Cats are very easy to love. Cats are very popular.";
+			text = text.replaceAll("Cats", "Dogs");
+			text = text.replaceAll("cats", "dogs");
+
+			document.getElementById("content").innerHTML = text;
+
+		
+	</script>
+</div>
+</body>
+</html>

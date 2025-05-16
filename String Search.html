@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div>
+	<h1>The Index() Method</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var text = "Please locate where 'locate' occurs!";
+		var index = text.indexOf("locate");
+		document.getElementById("demo").innerHTML = index;
+
+	</script>
+</div>
+
+<div>
+	<h1>The lastIndexOf() Method</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var text = "Please locate where 'locate' occurs!";
+		var index = text.lastIndexOf("locate");
+		document.getElementById("main").innerHTML = index;
+
+	</script>
+</div>
+
+<div>
+	<h1>The search() Method</h1>
+
+	<p id="menu"></p>
+
+	<script>
+		var text = "Please locate where 'locate' occurs!";
+		var index = text.search("locate");
+		document.getElementById("menu").innerHTML = index;
+
+	</script>
+</div>
+
+<div>
+	<h1>The match() Method</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var text = "The rain in SPAIN staus mainly in the plain";
+		var myArr = text.match("ain");
+		document.getElementById("class").innerHTML = myArr.length + " " + myArr;
+
+	</script>
+</div>
+
+<div>
+	<h1>The includes() Method</h1>
+
+	<p id="content"></p>
+
+	<script>
+		var text = "Hello and Welcome to India.";
+		document.getElementById("content").innerHTML = text.includes("India");
+
+	</script>
+</div>
+</body>
+</html>
