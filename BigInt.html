@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BigInt</title>
+</head>
+<body>
+<div>
+	<h2>BigInt Multiply</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = 9007199254740995n;
+		var y = 9007199254740995n;
+		let z = x * y;
+
+		document.getElementById("demo").innerHTML = z;
+	</script>
+</div>
+
+<div>
+<h2>Integer Precision</h2>
+
+	<p id="class"></p>
+
+	<script>
+		var x = 9007199254740992 === 9007199254740993;
+		document.getElementById("class").innerHTML = x;
+	</script>
+</div>
+
+<div>
+	<h2>MAX_SAFE_INTEGER</h2>
+
+	<p id="main"></p>
+
+	<script>
+		var x = Number.MAX_SAFE_INTEGER;
+		document.getElementById("main").innerHTML = x;
+	</script>
+</div>
+
+<div>
+	<h2>MIN_SAFE_INTEGER</h2>
+
+	<p id="content"></p>
+
+	<script>
+		var x = Number.MIN_SAFE_INTEGER;
+		document.getElementById("content").innerHTML = x;
+	</script>
+</div>
+</body>
+</html>

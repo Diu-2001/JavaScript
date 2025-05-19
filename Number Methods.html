@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Number Methods</title>
+</head>
+<body>
+
+<div>
+	<h2>The toString() Method</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = 123;
+		document.getElementById("demo").innerHTML = 
+		x.toString() + "<br>" +
+		(123).toString() + "<br>" +
+		(100 + 23).toString();
+	</script>
+</div>
+
+<div>
+	<h2>The toExponential() Method</h2>
+
+	<p id="class"></p>
+
+	<script>
+		var x = 9.656;
+		document.getElementById("class").innerHTML = 
+		x.toExponential() + "<br>" +
+		x.toExponential(2) + "<br>" +
+		x.toExponential(4) + "<br>" +
+		x.toExponential(6);
+	</script>
+</div>
+
+<div>
+	<h2>The toFixed() Method</h2>
+
+	<p id="view"></p>
+
+	<script>
+		var x = 9.656;
+		document.getElementById("view").innerHTML = 
+		x.toFixed() + "<br>" +
+		x.toFixed(2) + "<br>" +
+		x.toFixed(4) + "<br>" +
+		x.toFixed(6);
+	</script>
+</div>
+
+<div>
+	<h2>The toPrecision() Method</h2>
+
+	<p id="new"></p>
+
+	<script>
+		var x = 9.656;
+		document.getElementById("new").innerHTML = 
+		x.toPrecision() + "<br>" +
+		x.toPrecision(2) + "<br>" +
+		x.toPrecision(4) + "<br>" +
+		x.toPrecision(6);
+	</script>
+</div>
+</body>
+</html>

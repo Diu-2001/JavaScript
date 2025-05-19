@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Numbers</title>
+</head>
+<body>
+
+<div>
+	<h2>JavaScript Number</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = 3.14;
+		var y = 314;
+		document.getElementById('demo').innerHTML = x + "<br>" + y;
+	</script>
+</div>
+
+<div>
+	<h2>Integer Precision</h2>
+
+	<p id="class"></p>
+
+	<script>
+		var x = 999999999999999;
+		var y = 9999999999999999;
+		document.getElementById('class').innerHTML = x + "<br>" + y;
+	</script>
+</div>
+
+<div>
+	<h2>Floating Precision</h2>
+
+	<p id="main"></p>
+    <p id="menu"></p>
+	<script>
+		var x = 0.2 + 0.1;
+		document.getElementById("main").innerHTML = "0.2 + 0.1 = " + x;
+        var y = (0.2*10 + 0.1*10) / 10;
+        document.getElementById("menu").innerHTML = "0.2 + 0.1 =" + y;
+	</script>
+</div>
+
+<div>
+	<h2>NaN - Not a Number</h2>
+
+	<p id="lain"></p>
+
+	<script>
+		document.getElementById("lain").innerHTML = 100 / "Apple";
+	</script>
+</div>
+
+<div>
+	<h2>Infinity</h2>
+
+	<p id="content"></p>
+
+	<script>
+		var myNumber = 2;
+		var txt = "";
+		while (myNumber != Infinity) {
+			myNumber = myNumber * myNumber;
+			txt = txt + myNumber + "<br>";
+		}
+		document.getElementById("content").innerHTML = txt;
+	</script>
+</div>
+</body>
+</html>

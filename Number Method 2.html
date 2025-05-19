@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Number Methods</title>
+</head>
+<body>
+<div>
+	<h2>The Number() Method</h2>
+
+	<p id=demo></p>
+
+	<script>
+		document.getElementById("demo").innerHTML = 
+		Number(true) + "<br>" +
+		Number(false) + "<br>" +
+		Number("10") + "<br>" +
+		Number("  10") + "<br>" +
+		Number("10  ") + "<br>" +
+		Number("10.33") + "<br>" +
+		Number("10,33") + "<br>" +
+		Number("10 33") + "<br>" +
+		Number("John");
+	</script>
+</div>
+
+<div>
+	<h2>The Number() Method</h2>
+
+	<p id=view></p>
+
+	<script>
+		var x = new Date("1970-01-01");
+		document.getElementById("view").innerHTML = Number(x);
+	</script>
+</div>
+
+<div>
+	<h2>The parseInt() Method</h2>
+
+	<p id=class></p>
+
+	<script>
+		document.getElementById("class").innerHTML = 
+		parseInt("-10") + "<br>" +
+		parseInt("-10.33") + "<br>" +
+		parseInt("10") + "<br>" +
+		parseInt("10.33") + "<br>" +
+		parseInt("10 6") + "<br>" +
+		parseInt("10 years") + "<br>" +
+		parseInt("years 10");
+	</script>
+</div>
+
+<div>
+	<h2>The parseFloat() Method</h2>
+
+	<p id=content></p>
+
+	<script>
+		document.getElementById("content").innerHTML = 
+		parseFloat("-10") + "<br>" +
+		parseFloat("-10.33") + "<br>" +
+		parseFloat("10") + "<br>" +
+		parseFloat("10.33") + "<br>" +
+		parseFloat("10 20 30") + "<br>" +
+		parseFloat("10 years") + "<br>" +
+		parseFloat("years 10");
+	</script>
+</div>
+</body>
+</html>
