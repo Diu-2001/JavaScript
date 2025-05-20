@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays Methods</title>
+
+</head>
+<body>
+<div>
+	<h1>Array at()</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+		var fruit = fruits.at(2);
+        document.getElementById('demo').innerHTML = fruit;
+	</script>
+</div>
+
+<div>
+	<h1>Array join()</h1>
+
+	<p id="view"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById('view').innerHTML = fruits.join("*");
+	</script>
+</div>
+
+<div>
+	<h1>Array pop()</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+		var fruit = fruits.pop();
+        document.getElementById('class').innerHTML = fruit;
+	</script>
+</div>
+
+<div>
+	<h1>Array push()</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+	    fruits.push("Kiwi");
+        document.getElementById('main').innerHTML = fruits;
+	</script>
+</div>
+
+<div>
+	<h1>Array shift()</h1>
+
+	<p id="menu"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+		fruits.shift();
+        document.getElementById('menu').innerHTML = fruits;
+	</script>
+</div>
+
+<div>
+	<h1>Array shift()</h1>
+
+	<p id="new"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById('new').innerHTML = fruits.shift();
+	</script>
+</div>
+
+<div>
+	<h1>Array unshift()</h1>
+
+	<p id="content"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+		fruits.unshift("Mango");
+        document.getElementById('content').innerHTML = fruits;
+	</script>
+</div>
+
+<div>
+	<h1>Array unshift()</h1>
+
+	<p id="section"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple"];
+		fruits.unshift();
+        document.getElementById('section').innerHTML = fruits.unshift("Mango");
+	</script>
+</div>
+</body>
+</html>

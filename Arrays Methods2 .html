@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays Methods</title>
+</head>
+<body>
+<div>
+	<h1>Array concat()</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var myGirls = ["Lily", "Maria"];
+		var myBoys = ["Max", "Nick", "John"];
+var myChildren = myGirls.concat(myBoys);
+		document.getElementById('demo').innerHTML  = myChildren;
+	</script>
+	
+</div>
+
+<div>
+	<h1>Array concat()</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var array1 = ["Lily", "Maria"];
+		var array2 = ["Max", "Nick", "John"];
+        var array3 = ["Mike", "Claire"]
+        var myChildren = array1.concat(array2,array3);
+		document.getElementById('main').innerHTML  = myChildren;
+	</script>
+</div>
+
+<div>
+	<h1>Array copyWithin()</h1>
+
+	<p id="menu"></p>
+
+	<script>
+		var myGirls = ["Lily", "Maria", "Claire", "Sofia", "isabelle", "Nancy"];
+		document.getElementById('menu').innerHTML  = myGirls.copyWithin(2,0);
+	</script>
+</div>
+
+<div>
+	<h1>Array flat()</h1>
+
+	<p id="new"></p>
+
+	<script>
+		var myArr = [[1,2],[3,4],[5,6]];
+		var newArr = myArr.flat();
+		document.getElementById('new').innerHTML  = newArr;
+	</script>
+</div>
+
+<div>
+	<h1>Array flatMap()</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var myArr = [1,2,3,4,5,6];
+		var newArr = myArr.flatMap(x=> [x,x + 10]);
+		document.getElementById('class').innerHTML  = newArr;
+	</script>
+</div>
+
+<div>
+	<h1>Array splice()</h1>
+
+	<p id="content"></p>
+
+	<script>
+		var myGirls = ["Lily", "Maria", "Claire", "Sofia", "Isabelle", "Nancy"];
+		myGirls.splice(2, 2, "Emily", "Megan")
+		document.getElementById('content').innerHTML  = myGirls;
+	</script>
+</div>
+</body>
+</html>

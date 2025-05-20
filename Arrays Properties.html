@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays Properties</title>
+</head>
+<body>
+<div>
+	<h1>Length Property</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		var size = fruits.length;
+		document.getElementById("demo").innerHTML = size;
+	</script>
+</div>
+
+<div>
+	<h1>First Array Element</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		var fruit = fruits[0];
+		document.getElementById("class").innerHTML = fruit;
+	</script>
+</div>
+
+<div>
+	<h1>Last Array Element</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		var fruit = fruits[fruits.length - 1];
+		document.getElementById("main").innerHTML = fruit;
+	</script>
+</div>
+
+<div>
+	<h2>Looping an Array</h2>
+
+     <p id="view"></p>
+
+      <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var flen = fruits.length;
+
+        var text = "<ul>";
+        for (let i = 0; i < flen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("view").innerHTML = text;
+      </script>
+</div>
+
+<div>
+	<h2>The forEach() Method</h2>
+
+	<p id="new"></p>
+
+	<script>
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+		var text = "<ul>";
+		fruits.forEach(myFunction);
+		text += "</ul>";
+
+		document.getElementById("new").innerHTML = text;
+
+		function myFunction(value) {
+			text += "<li>" + value + "</li>";
+		}
+	</script>
+</div>
+    <h2>The push() Method</h2>
+       <button onclick="myFunction()">Try it</button>
+
+       <p id="length"></p>
+
+      <script>
+           var fruits = ["Banana", "Orange", "Apple"];
+           document.getElementById("length").innerHTML = fruits;
+
+           function myFunction() {
+           fruits.push("Lemon");
+           document.getElementById("length").innerHTML = fruits;
+          }
+      </script>
+
+<div>
+	
+</div>
+</body>
+</html>
+		
