@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Search</title>
+</head>
+<body>
+<div>
+	<h1>The indexOf() Methods</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits = ["Apple", "Orange", "Apple", "Mango"];
+		var position = fruits.indexOf("Apple") + 1;
+
+		document.getElementById('demo').innerHTML = "Apple is found in position " + position;
+	</script>
+</div>
+
+<div>
+	<h1>The lastIndexOf() Methods</h1>
+
+	<p id="main"></p>
+
+	<script>
+		var fruits = ["Apple", "Orange", "Apple", "Mango"];
+		var position = fruits.lastIndexOf("Apple") + 1;
+
+		document.getElementById('main').innerHTML = "Apple is found in position " + position;
+	</script>
+</div>
+
+<div>
+	<h1>The includes() Methods</h1>
+
+	<p id="class"></p>
+
+	<script>
+		var fruits = ["Apple", "Orange", "Apple", "Mango"];
+		document.getElementById('class').innerHTML = fruits.includes("Mango");
+	</script>
+</div>
+
+<div>
+	<h1>The find() Methods</h1>
+
+	<p id="menu"></p>
+
+	<script>
+		var numbers = [4, 9, 16, 25, 29];
+		var first = numbers.find(myFunction);
+
+		document.getElementById('menu').innerHTML = "First number over 18 is " + first;
+
+		function myFunction(value, index, array) {
+			return value > 18;
+		}
+	</script>
+</div>
+
+<div>
+	<h1>The findIndex() Methods</h1>
+
+	<p id="view"></p>
+
+	<script>
+		var numbers = [4, 9, 16, 25, 29];
+
+		document.getElementById('view').innerHTML = "First number over 18 has index  " + numbers.findIndex(myFunction);
+
+		function myFunction(value, index, array) {
+			return value > 18;
+		}
+	</script>
+</div>
+
+<div>
+	<h1>The findLast() Methods</h1>
+
+	<p id="new"></p>
+
+	<script>
+		var temp = [27, 28, 30, 40, 42, 35, 30];
+		var high = temp.findLast(x => x > 40);
+
+		document.getElementById('new').innerHTML = "The last temperature over 40 was " + high;
+	</script>
+</div>
+
+<div>
+	<h1>The findLastIndex() Methods</h1>
+
+	<p id="content"></p>
+
+	<script>
+		var temp = [27, 28, 30, 40, 42, 35, 30];
+		var pos = temp.findLastIndex(x => x > 40);
+
+		document.getElementById('content').innerHTML = "The last temperature over 40 was in position " + pos;
+	</script>
+</div>
+</body>
+</html>

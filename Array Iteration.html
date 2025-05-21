@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Iteration Metods</title>
+</head>
+<body>
+<div>
+	<h1>The forEach() Method</h1>
+	<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];
+
+var txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+</div>
+
+<div>
+	<h1>The map() Method</h1>
+
+	<p id="demo1"></p>
+
+	<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo1").innerHTML = numbers2;
+
+function myFunction(value) {
+  return value * 2;
+}
+</script>
+</div>
+
+<div>
+	<h1>The flatMap() Methods</h1>
+
+	<p id="demo2"></p>
+
+	<script>
+		var myArr = [1, 2, 3, 4, 5,6];
+        var newArr = myArr.flatMap(x => [x, x * 10]);
+        document.getElementById("demo2").innerHTML = newArr;
+	</script>
+</div>
+</body>
+</html>
