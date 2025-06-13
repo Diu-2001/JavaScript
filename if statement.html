@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript's Statement</title>
+</head>
+<body>
+ <div>
+
+ 	<h2>Javascript if</h2>
+ 	<p>Display "Good Day!" if the hour is less than 18:00: </p>
+
+ 	<p id="demo">Good Evening!</p>
+
+ 	<script>
+ 		if (new Date().getHours() < 18) {
+ 			document.getElementById("demo").innerHTML = "Good Day!";
+ 		}
+ 	</script>
+ </div>
+
+ <div>
+ 	<h2>Javascript if and else</h2>
+
+ 	<p>A time-based greeting:</p>
+
+ 	<p id="demo1"></p>
+
+ 	<script>
+ 		var hour = new Date().getHours();
+ 		var greeting;
+
+ 		if(hour < 12) {
+ 			greeting= "Good morning";
+ 		}
+ 		else{
+ 			greeting = "Good afternoon";
+ 		}
+
+ 		document.getElementById("demo1").innerHTML = greeting;
+ 	</script>
+ </div>
+
+ <div>
+ 	<h2>Javascript if, else and else if</h2>
+
+ 	<p>A time-based greeting:</p>
+
+ 	<p id="demo2"></p>
+
+ 	<script>
+ 		var time = new Date().getHours();
+ 		var greetings;
+
+ 		if(time < 12) {
+ 			greetings= "Good morning";
+ 		}
+ 		else if (time < 18) {
+ 			greetings = "Good afternoon";
+ 		}
+ 		else {
+ 			greetings = "Good evening";
+ 		}
+
+ 		document.getElementById("demo2").innerHTML = greetings;
+ 	</script>
+ </div>
+</body>
+</html>

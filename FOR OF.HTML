@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>For Of Loop</title>
+</head>
+<body>
+<div>
+	<p id="demo"></p>
+
+	<script>
+		var cars = ["BMW", "Volvo", "Mini"];
+
+		var text = "";
+		for (let x of cars) {
+			text += x + "<br>";
+		}
+		document.getElementById('demo').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<p id="demo1"></p>
+
+        <script>
+            var language = "JavaScript";
+
+            var text = "";
+            for (let x of language) {
+            text += x + "<br>";
+            }
+
+            document.getElementById("demo1").innerHTML = text;
+        </script>
+</div>
+</body>
+</html>
