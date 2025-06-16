@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Break Statement</title>
+</head>
+<body>
+<div>
+	<h2>Javascript Loops</h2>
+
+	<p>A loop with a <b>break</b> statement.</p>
+
+	<p id="demo"></p>
+
+	<script>
+		var text = "";
+		for (var i = 0; i < 10; i++) {
+			if(i === 3) { break; }
+			text += "The number is" + i + "<br>";
+		}
+		document.getElementById('demo').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h2>JavaScript Break</h2>
+
+	<p id="demo1"></p>
+
+	<script>
+		var cars = ["BMW", "Volvo", "Saab", "Ford"];
+		var text = "";
+
+		list: {
+			text += cars[0] + "<br>";
+			text += cars[1] + "<br>";
+			break list;
+			text += cars[2] + "<br>";
+			text += cars[3] + "<br>";
+		}
+		document.getElementById("demo1").innerHTML = text;
+	</script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Iteration</title>
+</head>
+<body>
+<div>
+	<h2>Iteration over a String</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		var name = "Hello world!";
+
+		var text = "";
+		for (var x of name) {
+			text += x + "<br>";
+		}
+		document.getElementById('demo').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h2>Iteration over a Array</h2>
+
+	<p id="demo1"></p>
+
+	<script>
+		var letters = ["a", "b", "c"];
+
+		var text = "";
+		for (var x of letters) {
+			text += x + "<br>";
+		}
+		document.getElementById('demo1').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h2>Iteration over a Set</h2>
+
+	<p id="demo2"></p>
+
+	<script>
+		var letters = ["a", "b", "c"];
+
+		var text = "";
+		for (var x of letters) {
+			text += x + "<br>";
+		}
+		document.getElementById('demo2').innerHTML = text;
+	</script>
+</div>
+</body>
+</html>

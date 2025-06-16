@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Set Methods</title>
+</head>
+<body>
+<div>
+	<h1>The new Set() Method</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+		document.getElementById('demo').innerHTML = "The set has " + letters.size + " values.";
+	</script>
+</div>
+
+<div>
+	<h1>Listing Set Elements</h1>
+
+	<p id="demo1"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+		var text ="";
+		for (var x of letters) {
+			text += x + "<br>";
+		}
+
+		document.getElementById('demo1').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h1>The has() Method</h1>
+
+	<p id="demo2"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+		answer = letters.has("d");
+
+		document.getElementById('demo2').innerHTML = "The answer is " + answer;
+	</script>
+</div>
+
+<div>
+	<h1>The forEach() Method</h1>
+
+	<p id="demo3"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+        var text = "";
+        letters.forEach (function(value){
+        text += value + "<br>";
+    })
+		document.getElementById('demo3').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h1>The values() Method</h1>
+
+	<p id="demo4"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+		var myIterator = letters.values();
+
+        var text = "";
+        for (var x of myIterator){
+        text += x + "<br>";
+    }
+		document.getElementById('demo4').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h1>The keys() Method</h1>
+
+	<p id="demo5"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+       var myIterator = letters.keys();
+
+        var text = "";
+        for (var x of myIterator){
+        text += x + "<br>";
+    }
+		document.getElementById('demo5').innerHTML = text;
+	</script>
+</div>
+
+<div>
+	<h1>The entries() Method</h1>
+
+	<p id="demo6"></p>
+
+	<script>
+		var letters = new Set(["a", "b", "c"]);
+
+       var myIterator = letters.entries();
+
+        var text = "";
+        for (var entry of myIterator){
+        text += entry + "<br>";
+    }
+		document.getElementById('demo6').innerHTML = text;
+	</script>
+</div>
+</body>
+</html>

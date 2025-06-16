@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maps</title>
+</head>
+<body>
+<div>
+	<h1>The new Map() Method</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits = new Map([
+			["apples", 500],
+			["banana", 300],
+			["oranges", 200]
+		]);
+
+		var numb = fruits.get("apples");
+		document.getElementById('demo').innerHTML = "There are " + numb + " apples.";
+	</script>
+</div>
+
+<div>
+	<h1>The set() Method</h1>
+
+	<p id="demo1"></p>
+
+	<script>
+		var fruits = new Map([
+			["apples", 500],
+			["banana", 300],
+			["oranges", 200]
+		]);
+
+		fruits.set("apples", 200);
+
+		var numb = fruits.get("apples");
+		document.getElementById('demo1').innerHTML = "There are " + numb + " apples.";
+	</script>
+</div>
+
+<div>
+	<h1>The get() Method</h1>
+
+	<p id="demo2"></p>
+
+	<script>
+		var fruits = new Map([
+			["apples", 500],
+			["banana", 300],
+			["oranges", 200]
+		]);
+
+		document.getElementById('demo2').innerHTML = fruits.get("apples");
+	</script>
+</div>
+</body>
+</html>
