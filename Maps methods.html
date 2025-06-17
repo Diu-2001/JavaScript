@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maps Methods</title>
+   </head>
+   <body>
+    <div>
+       <h1>JavaScript Maps</h1> 
+       <h2>The new Map Method()</h2>
+
+       <p>Creating a map from an array:</p>
+
+       <p id="demo"></p>
+       
+       <script>
+        var fruits = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 200]
+        ]);
+        var numb = fruits.get("apples");
+        document.getElementById("demo").innerHTML = "There are " + numb + " apples.";
+       </script>
+    </div>
+
+    <div>
+        <h2>The get() Methods</h2>
+
+        <p id="demo1"></p>
+
+         <script>
+        var fruits = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 200]
+        ]);
+
+        document.getElementById("demo1").innerHTML = fruits.get("apples");
+       </script>
+    </div>
+
+     <div>
+        <h2>The set() Methods</h2>
+
+        <p id="demo2"></p>
+
+         <script>
+        var fruits = new Map()
+        fruits.set("apples", 500);
+        fruits.set("banana", 300);
+        fruits.set("oranges", 200);
+
+        var numb = fruits.get("apples");
+        document.getElementById("demo2").innerHTML = "There are " + numb + " apples.";
+       </script>
+    </div>
+
+    <div>
+        <h2>The size Property</h2>
+
+        <p id="demo3"></p>
+
+         <script>
+        var fruits = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 200]
+        ]);
+
+        document.getElementById("demo3").innerHTML = fruits.size;
+       </script>
+    </div>
+    
+    <div>
+        <h2>The delete() Methods</h2>
+
+        <p id="demo4"></p>
+
+         <script>
+        var fruits = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 200]
+        ]);
+     
+        fruits.delete("apples");
+        document.getElementById("demo4").innerHTML = fruits.size;
+       </script>
+    </div>
+   </body>
+</html>

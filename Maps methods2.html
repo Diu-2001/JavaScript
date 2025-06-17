@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <h2>The clear() Method</h2>
+
+            <p id="demo"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                fruits.clear();
+
+                document.getElementById("demo").innerHTML = fruits.size;
+            </script>
+        </div>
+
+        <div>
+            <h2>The has() Method</h2>
+
+            <p id="demo1"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                fruits.delete("apples");
+
+                document.getElementById("demo1").innerHTML = fruits.has("apples");
+            </script>
+        </div>
+
+        <div>
+            <h2>The foeEach() Method</h2>
+
+            <p id="demo2"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                var text = "";
+                fruits.forEach (function(value, key) {
+                    text += key + ' = ' + value + "<br>"
+                })
+                document.getElementById("demo2").innerHTML = text;
+            </script>
+        </div>
+
+        <div>
+            <h2>The entries() Method</h2>
+
+            <p id="demo3"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                var text = "";
+                for (var x of fruits.entries()) {
+                    text += x + "<br>";
+                }
+                document.getElementById("demo3").innerHTML = text;
+            </script>
+        </div>
+
+         <div>
+            <h2>The keys() Method</h2>
+
+            <p id="demo4"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                var text = "";
+                for (var x of fruits.keys()) {
+                    text += x + "<br>";
+                }
+                document.getElementById("demo4").innerHTML = text;
+            </script>
+        </div>
+
+         <div>
+            <h2>The values() Method</h2>
+
+            <p id="demo5"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["banana", 300],
+                    ["oranges", 200]
+                ]);
+
+                var text = "";
+                for (var x of fruits.values()) {
+                    text += x + "<br>";
+                }
+                document.getElementById("demo5").innerHTML = text;
+            </script>
+        </div>
+    </body>
+</html>
