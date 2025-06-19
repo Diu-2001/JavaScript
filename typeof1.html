@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Complex Data Types</title>
+    </head>
+    <body>
+        <div>
+            <h2>The typeof Operator</h2>
+
+            <p>The typeof operator returns object for both objects, arrays, maps, sets, and null.</p>
+            <p>The typeof operator does not return object for functions.</p>
+
+            <p id="demo"></p>
+
+            <script>
+                document.getElementById("demo").innerHTML = typeof {name:'John'} + "<br>" + typeof [1,2,3,4] + "<br>" + typeof new Map() + "<br>" + typeof new Set() + "<br>" + typeof null + "<br>" + typeof function myFunc(){} ;
+
+            </script>
+        </div>
+    </body>
+    </html>

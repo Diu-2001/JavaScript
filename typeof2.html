@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>typeOf</title>
+    </head>
+    <body>
+        <div>
+            <h2>The isArray() Method</h2>
+
+            <p id="demo"></p>
+
+            <script>
+                var fruits = ["Banana", "Orange", "Apple"];
+                document.getElementById("demo").innerHTML =Array.isArray(fruits);
+            </script>
+        </div>
+
+        <div>
+           <h2>The instanceof Operator</h2> 
+
+           <p>The instanceof operator returns true if an object is an instance of a specified object type:</p>
+
+           <p id="demo1"></p>
+
+           <script>
+            var time = new Date();
+            document.getElementById("demo1").innerHTML = "Date: " + (time instanceof Date);
+           </script>
+        </div>
+
+        <div>
+           <p id="demo2"></p> 
+
+           <script>
+            var fruits = ["apples", "bananas", "oranges"];
+            document.getElementById("demo2").innerHTML = "Array: " + (fruits instanceof Array);
+           </script>
+        </div>
+
+        <div>
+            <p id="demo3"></p>
+
+            <script>
+                var fruits = new Map([
+                    ["apples", 500],
+                    ["bananas", 300],
+                    ["oranges", 200]
+                ]);
+                document.getElementById("demo3").innerHTML = "Map: " + (fruits instanceof Map);
+            </script>
+        </div>
+
+        <div>
+            <p id="demo4"></p>
+
+            <script>
+                var fruits = new Set(["apples", "bananas", "oranges"]);
+                document.getElementById("demo4").innerHTML = "Set: " + (fruits instanceof Set);
+            </script>
+        </div>
+
+        <div>
+            <p id="demo5"></p>
+
+            <script>
+                var fruits = new Set(["apples", "bananas", "oranges"]);
+                document.getElementById("demo5").innerHTML ="Set: " + (fruits instanceof Set);
+            </script>
+        </div>
+    </body>
+</html>
