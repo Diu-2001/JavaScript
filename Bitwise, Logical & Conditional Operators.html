@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bitwise, Logical & Conditional</title>
+</head>
+<body>
+    <h2>The & Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 5 & 1;
+    </script>
+
+   <h2>The ^ Operator</h2> 
+
+   <p id="demo1"></p>
+
+   <script>
+    document.getElementById("demo1").innerHTML = 5 ^ 1;
+   </script>
+
+   <h2>The | Operator</h2>
+
+   <p id="demo2"></p>
+
+   <script>
+    document.getElementById("demo2").innerHTML = 5 | 1;
+   </script>
+
+   <h2>The && Operator (Logical AND)</h2>
+   <p>The && operator returns true if both expression are true, otherwise it returns false.</p>
+
+   <p id="demo3"></p>
+
+   <script>
+    var x = 6;
+    var y = 3;
+
+    document.getElementById("demo3").innerHTML = (x < 10 && y > 1) + "<br>" +
+    (x < 10 && y < 1);
+   </script>
+
+   <h2>The || Operator (Logical OR)</h2>
+
+   <p>The || returns true if one or both expressions are true, otherwise it returns false.</p>
+
+   <p id="demo4"></p>
+
+   <script>
+    var x = 6;
+    var y = 3;
+
+    document.getElementById("demo4").innerHTML = (x == 5 || y == 5) + "<br>" +
+    (x == 6 || y == 0) + "<br>" + 
+    (x == 0 || y == 3) + "<br>" + 
+    (x == 6 || y == 3);
+   </script>
+
+   <h2>The () ? : Ternary Operator</h2>
+
+   <p>Input your age and click the button:</p>
+
+   <input id="age" value="18" />
+
+   <button onclick="myFunction()">Try it</button>
+
+   <p id="demo5"></p>
+
+   <script>
+    function myFunction() {
+        var age =age
+        document.getElementById("age").value;
+        var voteable = (age < 18) ? "Too young":"Old enough";
+
+        document.getElementById("demo5").innerHTML = voteable + " to vote.";
+    }
+   </script>
+</body>
+</html>

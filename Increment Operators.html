@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Increment Operators</title>
+</head>
+<body>
+    <h1>JavaScript Operators</h1>
+
+    <p><b>In this example, y is incremented after it is assigned to x (post-incremented).</b></p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        var y = 5;
+        var x = y++;
+        document.getElementById("demo").innerHTML = y;
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+     <p><b>In this example, y is decremented after it is assigned to x (post-decremented).</b></p>
+
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        var y = 5;
+        var x = y--;
+        document.getElementById("demo2").innerHTML = y;
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+<p><b>In this example, y is incremented before it is assigned to x (pre-incremented).</b></p>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        var y = 5;
+        var x = ++y;
+        document.getElementById("demo4").innerHTML = y;
+        document.getElementById("demo5").innerHTML = x;
+    </script>
+
+    <p><b>In this example, y is decremented before it is assigned to x (pre-decremented).</b></p>
+
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+        var y = 5;
+        var x = --y;
+        document.getElementById("demo6").innerHTML = y;
+        document.getElementById("demo7").innerHTML = x;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shift & Relational Operators</title>
+</head>
+<body>
+    <h2>The << Operator</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 5 << 1;
+    </script>
+
+    <h2>The >> Operator</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        document.getElementById("demo1").innerHTML = -5 >> 1;
+    </script>
+
+    <h2>The >>> Operator</h2>
+
+    <p id="demo2"></p>
+
+    <script>
+        document.getElementById("demo2").innerHTML = 5 >>> 1;
+    </script>
+
+    <h2>The in Operator</h2>
+
+    <p><b>Is "PI" a propertt of Math?</b></p>
+
+    <p id="demo3"></p>
+
+    <script>
+        document.getElementById("demo3").innerHTML = "PI" in Math;
+    </script>
+
+    <h2>The instanceof Operator</h2>
+
+    <p><b>The instanceof operator returns true if an object is an instance of specified object:</b></p>
+
+    <p id="demo4"></p>
+
+    <script>
+        var cars = ["Saab", "Volvo", "BMW"];
+
+        document.getElementById("demo4").innerHTML = "Array: " + (cars instanceof Array) + "<br>String: " + (cars instanceof String);
+    </script>
+</body>
+</html>
