@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>This Keyword</title>
+</head>
+<body>
+    <h1>JavaScript <i>this</i> Keyword</h1>
+    <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+    <p>Because <b>fullName</b> is a method of the person object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            fistName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.fistName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+    <p>In this example, <b>this</b> refers to the window object:</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        let x = this;
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+    <p>In strict mode, when used alone, <b>this</b> also refers to the global object:</p>
+    <p id="demo2"></p>
+
+    <script>
+        "use strict";
+        let y = this;
+        document.getElementById("demo2").innerHTML = y;
+    </script>
+
+    <p>In HTML event handler, <b>this</b> refers to the HTML element that received the event:</p>
+
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+</body>
+</html>

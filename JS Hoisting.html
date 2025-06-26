@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hoisting</title>
+</head>
+<body>
+    <h1>Hoisting</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        x = 5;
+
+        elem = document.getElementById("demo").innerHTML = x;
+
+        var x;
+    </script>
+
+    <p id="demo1"></p>
+
+    <script>
+        var x;
+        x = 5;
+
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+    <h2>JavaScript Hoisting</h2>
+    <p>With <b>let</b>, you cannot use a variable before it is declared.</p>
+    <p id="demo2"></p>
+
+    <script>
+        try{
+            carName= "Saab";
+            let carName = "Volvo";
+            
+        }
+        catch(err){
+
+            document.getElementById('demo2').innerHTML = err;
+        }
+    </script>
+
+    <p id="demo3"></p>
+
+    <script>
+        let carType;
+        carType = "Volvo";
+
+        document.getElementById("demo3").innerHTML = carType;
+    </script>
+
+    <p>With <b>const</b>, you cannot use variable before it is declared.</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        const carStyle = "Volvo";
+        document.getElementById("demo4").innerHTML = carStyle;
+    </script>
+    
+    <h2>Example of const</h2>
+
+    <p id="demo5"></p>
+
+    <script>
+        const carAtt = "Toyota";
+        document.getElementById("demo5").innerHTML = carAtt;
+    </script>
+</body>
+</html>

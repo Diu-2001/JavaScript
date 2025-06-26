@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Use Strict</title>
+</head>
+<body>
+    <h2>With "use strict"</h2>
+    <h3>Using a variable without declaring it, is not allowed.</h3>
+
+    <script>
+        "use strict";
+        x = 3.14;
+    </script>
+
+    <h2>Correction</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let x;
+        x = 3.14;
+
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <h2>Global "use strict" declaration.</h2>
+
+    <script>
+        "use strict";
+        myFunction();
+        function myFunction() {
+            y = 3.14;
+        }
+    </script>
+
+    <h2>Correction</h2>
+    <p id="demo1"></p>
+
+    <script>
+        let y = myFunction(3.14);
+        document.getElementById("demo1").innerHTML = y;
+
+        function myFunction(y) {
+            return y;
+        }
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        const a = {p1:10, p2:20};
+
+        document.getElementById("demo2").innerHTML = a.p1;
+    </script>
+</body>
+</html>
