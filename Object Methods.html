@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Object Methods</title>
+</head>
+<body>
+    <h1>JavaScript Object</h1>
+    <h2>The Object.assign() Method</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            eyeColor: "blue"
+        };
+
+        const person2 = {firstName: "Jane", lastName: "Smith"};
+
+        Object.assign(person1, person2);
+
+        let text = Object.entries(person1)
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+    <h2>The Object.entries() Method</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        const people = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            eyeColor: "blue" 
+        };
+
+        let text1 = Object.entries(people);
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+
+    <p>Object.entries() makes it simple to use objects in loops:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+       const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+
+    let text2 = "";
+    for (let [fruit, amount] of Object.entries(fruits)) {
+    text2 += fruit + ": " + amount + "<br>";
+   }
+
+    document.getElementById("demo2").innerHTML = text2;
+    </script>
+
+    <h2>The Object.fromEntries() Method</h2>
+
+    <p>The number of pears are:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        const fruits1 = new Map([
+            ['Bananas', 300],
+            ['Oranges', 200],
+            ['Pears', 500],
+            ['Apples', 400]
+        ]);
+
+        const obj = Object.fromEntries(fruits1);
+        document.getElementById("demo3").innerHTML = obj.Pears;
+    </script>
+
+    <h2>The Object.groupBy() Method</h2>
+
+    <p id="demo4"></p>
+
+    <script>
+        const fruits2 = [
+            {name: "Bananas", price: 300, color: "yellow"},
+            {name: "Oranges", price: 200, color: "orange"},
+            {name: "Pears", price: 500, color: "green"},
+            {name: "Apples", price: 400, color: "red"}
+        ];
+
+        function myCallback ({ price}) {
+            return price < 400 ? "cheap" : "expensive";
+        }
+
+        const result = Object.groupBy(fruits2, myCallback);
+        let text4 = "These fruits are cheap: <br>";
+        for (let [x,y] of result.cheap.entries()) {
+            text4 += x + ": " + y.name + "<br>";
+        }
+
+        text4 += "<br>These fruits are expensive: <br>";
+        for (let [x,y] of result.expensive.entries()) {
+            text4 += x + ": " + y.name + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text4;
+    </script>
+</body>
+</html>

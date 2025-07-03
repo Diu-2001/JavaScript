@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Properties</title>
+</head>
+<body>
+    <h1>The defineProperty() ,ethod</h1>
+
+    <p>This example adds a new property to an object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        Object.defineProperty(person, "age", {
+            value: 30,
+            writable: true,
+            enumerable: true,
+            configurable: true
+        });
+
+        let text = "";
+        for (let x in person) {
+            text += x + ": " + person[x] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+    <p>This example changes a property value.</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        const person1 = {
+            firstName: "Jane",
+            lastName: "Doe",
+            language: "English"
+        };
+
+        Object.defineProperty(person1, "language", {value: "NO"})
+
+        document.getElementById("demo1").innerHTML = person1.language;
+
+    </script>
+
+    <h2>The getOwnPropertyNames() Method</h2>
+
+    <p id="demo2"></p>
+
+    <script>
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            eyeColor: "blue"
+        }
+
+        document.getElementById("demo2").innerHTML = Object.getOwnPropertyNames(person2);
+    </script>
+
+    <h2>JavaScript Getters and Setters</h2>
+
+    <p>Perfect for creating counters:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        const obj = { counter:0};
+
+        Object.defineProperty(obj, "reset", {
+            get: function() {
+                this.counter = 0;
+            }
+        });
+        Object.defineProperty(obj, "increment", {
+            get: function() {
+                this.counter++;
+            }
+        });
+        Object.defineProperty(obj, "decrement", {
+            get: function() {
+                this.counter--;
+            }
+        });
+        Object.defineProperty(obj, "add", {
+            set: function(value) {
+                this.counter += value;
+            }
+        });
+        Object.defineProperty(obj, "subtract", {
+            set: function(value) {
+                this.counter -= value;
+            }
+        });
+
+        obj.reset;
+        obj.add = 8;
+        obj.subtract = 1;
+        obj.increment;
+        obj.decrement;
+        document.getElementById("demo3").innerHTML = obj.counter;
+    </script>
+</body>
+</html>

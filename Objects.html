@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Creating JavaScript Objects</h1>
+    <h2>Using an Object Literal</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {};
+
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+        document.getElementById("demo").innerHTML = 
+        person.firstName + " is " + person.age + " year old.";
+    </script>
+
+    <h2>Using the new Keyword</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        const personal = new Object();
+        personal.firstName = "John";
+        personal.lastName = "Doe";
+        personal.age = 50;
+        personal.eyeColor = "green";
+
+        document.getElementById("demo1").innerHTML = 
+        personal.firstName + " eyes is " + personal.eyeColor + " in color."
+    </script>
+
+    <h1>JavaScript Object Constructors</h1>
+
+    <p id="demo2"></p>
+
+    <script>
+        function Persons(firstName, lastName, age, eyeColor) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.eyeColor = eyeColor;
+        }
+
+        // Example usage:
+        const myFather = new Persons("John", "Doe", 50, "blue");
+        document.getElementById("demo2").innerHTML =
+            myFather.firstName + " is " + myFather.age + " years old and has " + myFather.eyeColor + " eyes.";
+    </script>
+
+    <h2>Other Example</h2>
+
+    <p id="demo3"></p>
+
+    <script>
+        // Example of a Person constructor function with a body
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        const myUncle = new Person("John", "Doe", 50, "blue");
+        const myAunt = new Person("Sally", "Rally", 48, "green");
+
+        document.getElementById("demo3").innerHTML =
+        "My Uncle is " + myUncle.age + ". My Aunt is " + myAunt.age + " .";
+    </script>
+
+    <p id="demo4"></p>
+
+    <script>
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.nationality = "English";
+        }
+
+        const myDad = new Person("John", "Doe", 50, "Blue");
+        const myMom = new Person("Sally", "Rally", 48, "green");
+
+        document.getElementById("demo4").innerHTML =
+        "My father is " + myDad.nationality + ". My mother is " + myMom.nationality;
+    </script>
+</body>
+</html>
