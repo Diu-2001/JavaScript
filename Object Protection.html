@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Object Protection</title>
+</head>
+<body>
+    <h2>The Object.preventExtensions() Methods</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        Object.preventExtensions(person)
+
+        let text = "";
+        try {
+            person.age = 30;
+        } catch (err) {
+            text = err;
+        }
+
+        document.getElementById("demo").innerHTML =text;
+    </script>
+
+    <h2>The Object.isExtensible() Method</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        Object.preventExtensions(person1);
+
+       let answer = Object.isExtensible(person1)
+        document.getElementById("demo1").innerHTML = answer;
+        </script>
+
+        <h2>The Object.seal() Method</h2>
+
+        <p id="demo2"></p>
+
+        <script>
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            eyeColor: "blue"
+        };
+
+      Object.seal(person)
+
+        // Test Error
+        let text2 = "";
+        try {
+        delete person2.age;
+        text2 = Object.values(person2);
+        }
+        catch (err) {
+        text2 = err;
+       }
+
+        document.getElementById("demo").innerHTML = text2;
+        </script>
+
+        <h2>The Object.isSealed() Method</h2>
+
+        <p id="demo3"></p>
+
+        <script>
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        Object.seal(person3);
+
+        let answer2 = Object.isSealed(person3);
+        document.getElementById("demo3").innerHTML = answer2;
+        </script>
+
+        <h2>The Object.freeze() Method</h2>
+
+        <p id="demo4"></p>
+
+        <script>    
+        const person4 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            eyeColor: "blue"
+        };
+
+        Object.freeze(person4)
+
+        // Test Error
+        let text3;
+        try {
+            person4.age = 35;
+            text3 = Object.values(person4);
+        } 
+        catch (err) {
+            text3 = err;
+        }
+
+        document.getElementById("demo4").innerHTML = text3;
+        </script>
+
+        <h2>The Object.isFrozen() Method</h2>
+
+        <p id="demo5"></p>
+
+        <script>
+        const person5 = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        Object.freeze(person5);
+
+        let answer3 = Object.isFrozen(person5);
+        document.getElementById("demo5").innerHTML = answer3;
+        </script>
+</body>
+</html>
