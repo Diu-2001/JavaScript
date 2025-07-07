@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameters</title>
+</head>
+<body>
+    <p>Settind a default value to a function parameters.</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        function myFunction(x, y) {
+            if (y === undefined) {
+                y = 5; // Default value for y
+            }
+            return x * y;
+        }
+        document.getElementById("demo1").innerHTML = myFunction(4); 
+    </script>
+
+    <h1>JavaScript Function</h1>
+    <h2>Default Parameter Values</h2>
+
+    <p>If y is not pass or undefined, then y = 10:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        function myFunction(x, y = 10) {
+            return x * y;
+        }
+        document.getElementById("demo2").innerHTML = myFunction(5); // Outputs 50
+    </script>
+
+    <h2>The Rest Parameters</h2>
+
+    <p>The rest parameters (...) allows a function to treat an indefinite number of arguments as an array:</p>
+    <p id="demo3"></p>
+
+    <script>
+        function sum(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+   }
+  
+        let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+    <p>Finding the largest number.</p>
+    <p id="demo4"></p>
+
+    <script>
+        function findMax() {
+            let max = -Infinity; // Start with the smallest possible number
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("demo4").innerHTML = findMax(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); // Outputs 10
+    </script>
+
+    <p>Sum of all arguments:</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        function sumAll() {
+            let total = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total;
+        }
+        document.getElementById("demo5").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+        </script>
+</body>
+</html>
