@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function Bind</title>
+    </head>
+<body>
+    <h1>JavaScript Function bind()</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        const person2 = {
+            firstName: "Mary",
+            lastName: "Doe"
+        };
+
+        // Bind the fullName function to person2
+        const boundFullName = person.fullName.bind(person2);
+        document.getElementById("demo").innerHTML = boundFullName();
+    </script>
+
+    <h2>JavaScript Function bind()</h2>
+    <p id="demo1"></p>
+
+    <script>
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe",
+            display: function() {
+                let y = document.getElementById("demo1");
+                y.innerHTML = this.firstName + " " + this.lastName;
+               }
+            }
+
+            person3.display();
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        const person4 = {
+            firstName: "Mary",
+            lastName: "Doe",
+            display: function() {
+                let x = document.getElementById("demo2");
+                x.innerHTML = this.firstName + " " + this.lastName;
+            }
+        }
+
+        let display = person4.display.bind(person4);
+        setTimeout(display, 3000);
+    </script>
+
+</body>
+</html>

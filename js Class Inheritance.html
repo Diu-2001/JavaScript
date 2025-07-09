@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Class Inheritance</title>
+    </head>
+    <body>
+       <h1>JavaScript Class Inheritance</h1> 
+
+       <p id="demo"></p>
+        
+       <script>
+        class Car {
+            constructor(brand, model, year) {
+                this.brand = brand;
+            }
+           present() {
+            return 'I have a ' + this.brand;
+           }
+           }
+
+        class Model extends Car {
+            constructor(brand, model, year) {
+                super(brand);
+                this.model = model;
+                this.year = year;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model + ' from ' + this.year;
+            }
+        }
+        const myCar = new Model("Ford", "Mustang", 2021);
+        document.getElementById("demo").innerHTML = myCar.show();
+       </script>
+
+       <h1>JavaScript Class Getter/Setter</h1>
+
+         <p id="demo1"></p>
+         <script>
+        class Vehicle {
+            constructor(brand, model, year) {
+                this.brand = brand;
+            }
+            get carInfo() {
+                return this.brand;
+            }
+            set carYear(x) {
+                this.year = x;
+            }
+        }
+        const myCar2 = new Car("Toyota", "Corolla", 2020);
+        myCar2.carYear = 2021; // Setting the year using setter
+        document.getElementById("demo1").innerHTML =
+            "My car is a " + myCar2.carInfo + " from the year " + myCar2.year + ".";
+         </script>
+
+         
+    </body>
+</html>

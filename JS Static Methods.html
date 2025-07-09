@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class Inheritance</title>
+</head>
+<body>
+    <h1>JavaScript Class Static Methods</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        class Car {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello() {
+                return "Hello, this is a static method!";
+            }
+        }
+
+        const myCar = new Car("Ford");
+        document.getElementById("demo").innerHTML = Car.hello();
+    </script>
+
+    <p id="demo1"></p>
+
+    <script>
+        class Vehicle {
+            constructor(brand) {
+                this.brand = brand;
+            }
+            static info() {
+                return "Vehicles are essential for transportation.";
+            }
+        }
+
+        document.getElementById("demo1").innerHTML = Vehicle.info();
+    </script>
+</body>  
+</html>

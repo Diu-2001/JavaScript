@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Class</title>
+    </head>
+    <body>
+        <h1>JavaScript Classes</h1>
+        <p>Creating two car Objects from a car class:</p>
+
+        <p id="demo"></p>
+
+        <script>
+            class Car {
+                constructor(brand, model, year) {
+                    this.brand = brand;
+                    this.model = model;
+                    this.year = year;
+                }
+            }
+
+            const car1 = new Car("Ford", "Mustang", 2021);
+            const car2 = new Car("Tesla", "Model S", 2022);
+
+            document.getElementById("demo").innerHTML = 
+                `Car 1: ${car1.brand} ${car1.model}, Year: ${car1.year}<br>` +
+                `Car 2: ${car2.brand} ${car2.model}, Year: ${car2.year}`;
+        </script>
+
+        <h1>JavaScript Class Methods</h1>
+        <p>How to define and use a Class method.</p>
+
+        <p id="demo1"></p>
+        <script>
+            class CarWithMethod {
+                constructor(brand, model, year) {
+                    this.brand = brand;
+                    this.year = year;
+                }
+
+                model() {
+                    return this.brand + " " + this.year;
+                }   
+            }
+
+            const car3 = new CarWithMethod("Toyota", "Corolla", 2020);
+            document.getElementById("demo1").innerHTML = 
+            "My car is a " + car3.model() + " from the year " + car3.year + ".";
+        </script>
+
+        <h1>JavaScript Classes use "strict mode"</h1>
+
+        <p id="demo2"></p>
+
+        <script>
+            class Cars {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+            const car4 = new Cars("Honda", 2018);
+            document.getElementById("demo2").innerHTML = 
+                "My car is a " + car4.name + " from the year " + car4.year + 
+                ". It is " + car4.age() + " years old.";
+        </script>
+    </body>
+</html>

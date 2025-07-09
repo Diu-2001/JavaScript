@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function Closures</title>
+    </head>
+    <body>
+        <h1>JavaScript Local Scope</h1>
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = myFunction();
+            function myFunction() {
+                let x = 10; // Local variable
+                return x * x; // Return the local variable
+            }
+        </script>
+
+        <h1>JavaScript Global Scope</h1>
+
+        <p id="demo1"></p>
+
+        <script>
+            myFunction();
+            document.getElementById("demo1").innerHTML = x * x; // Accessing global variable
+
+            function myFunction() {
+                x = 10; // Global variable
+            }
+        </script>
+    </body>
+</html>
