@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Async / Await</title>
+</head>
+<body>
+  <h1>JavaScript async / await</h1>
+  <p id="demo"></p>
+
+  <script>
+    function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+    }
+
+    async function myFunction() {return "Hello World!";}
+    
+    myFunction().then(
+        function(value) { myDisplayer(value); },
+        function(error) { myDisplayer(error); }
+    );
+  </script>
+
+  <p id="demo1"></p>
+
+  <script>
+    function myDisplayer(some) {
+        document.getElementById("demo1").innerHTML = some;
+    }
+    async function myFunction2() {
+        return "I love JavaScript!!";
+    }
+
+    myFunction2().then(
+        function(value) { myDisplayer(value); }
+    );
+  </script>
+
+  <h1 id="demo2"></h1>
+
+  <script>
+    async function myDisplay() {
+        let myPromise = new Promise(function(resolve, reject) {
+            resolve("I love JavaScript!");
+        });
+        document.getElementById("demo2").innerHTML = await myPromise;
+    }
+    myDisplay();
+  </script>
+</body>
+</html>

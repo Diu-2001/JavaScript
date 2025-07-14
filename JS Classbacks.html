@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Classbacks</title>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <h2>Function Sequence</h2>
+    <p>Functions in JavaScript can be executed in a specific sequence.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function myFirst() {
+            myDisplayer("Hello");
+        }
+
+        function mySecond() {
+            myDisplayer("Goodbye");
+        }
+
+        myFirst();
+        mySecond();
+    </script>
+
+     <p id="demo1"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo1").innerHTML = some;
+        }
+
+        function myFirst() {
+            myDisplayer("Hello");
+        }
+
+        function mySecond() {
+            myDisplayer("Goodbye");
+        }
+
+        mySecond();
+        myFirst();
+    </script>
+    
+    <p>The result of the calculation is:</p>
+    <p id="demo2"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo2").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2) {
+            let sum = num1 + num2;
+            return (sum);
+        }
+
+        let result = myCalculator(5, 10);
+        myDisplayer(result);
+
+    </script>
+
+    <p id="demo3"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo3").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2) {
+            let sum = num1 + num2;
+            myDisplayer (sum);
+        }
+
+       myCalculator(5, 10);
+    </script>
+
+    <h2>Callback Functions</h2>
+
+    <p id="demo4"></p>
+
+    <script>
+        const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+        const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+        document.getElementById("demo4").innerHTML = posNumbers;
+
+        function removeNeg(numbers, callback) {
+            const myArray = [];
+            for (const x of numbers) {
+                if (callback(x)) {
+                    myArray.push(x);
+                }
+            }
+            return myArray;
+        }
+    </script>
+</body>
+</html>

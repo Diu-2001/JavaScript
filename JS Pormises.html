@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Promise</title>
+</head>
+<body>
+    <h1>JavaScript Promise Object</h1>
+    <h2>The then() Method</h2>
+
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+            let x = 0;
+
+            if (x === 0) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(
+            function(value) { myDisplayer(value); },
+            function(error) { myDisplayer(error); }
+        );
+    </script>
+
+    <h2>setTimeout() with a Callback</h2>
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="demo2"></h1>
+    <script>
+        setTimeout(function() { myFunction("I love JavaScript!!"); }, 3000);
+
+        function myFunction(message) {
+            document.getElementById("demo2").innerHTML = message;
+        }
+    </script>
+
+    <p id="demo3"></p>
+
+    <script>
+        function myDisplayer2(some) {
+            document.getElementById("demo3").innerHTML = some;
+        }
+
+        function getFile(myCallback) {
+            let req = new XMLHttpRequest();
+            req.onload = function() {
+                if (this.status === 200) {
+                    myCallback(this.responseText);
+                } else {
+                    myCallback("Error: " + req.status);
+                }
+            }
+            req.open('GET', "myCar.html");
+            req.send();
+        }
+
+        getFile(myDisplayer2);
+    </script>
+</html>

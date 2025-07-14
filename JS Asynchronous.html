@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Asynchronous</title>
+</head>
+<body>
+    <h2>Callback Functions</h2>
+
+    <p>The result of the calculation is:</p>
+
+    <p id="demo2"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo2").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2, callback) {
+            let sum = num1 + num2;
+            callback(sum);
+        }
+
+        myCalculator(5, 10, myDisplayer);
+        </script>
+
+        <h2>setTimeout() with a Callback</h2>
+
+        <p>Wait 3 second (3000 millisecond) for this page to change.</p>
+
+        <h1 id="demo3"></h1>
+        <script>
+            setTimeout(myFunction , 3000);
+            function myFunction() {
+                document.getElementById("demo3").innerHTML = "I love JavaScript!!";
+            }
+        </script>
+        
+        <h2>setInterval() with a Callback</h2>
+
+        <p>Using setInterval to display the time every second (1000 millisecond)</p>
+
+        <h1 id="demo4"></h1>
+        <script>
+            setInterval(myFunction2, 1000);
+            function myFunction2() {
+                let d = new Date();
+                document.getElementById("demo4").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            }
+        </script>
+</body>
+</html>
