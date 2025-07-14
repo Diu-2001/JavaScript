@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EventListener</title>
+    </head>
+    <body>
+        <h1>JavaScript HTML Events</h1>
+        <h2>JavaScript addEventListener()</h2>
+        <p>Click "Try it" to execute the displayDate() function.</p>
+        <button id="myBtn">Try it!</button>
+
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("myBtn").addEventListener("click", displayDate);
+
+            function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
+
+        <button id="myBttn">Click!</button>
+
+        <script>
+            document.getElementById("myBttn").addEventListener("click", function() {
+                alert("Hello World!");
+            });
+        </script>
+
+        <button id="myButton">Click Me!</button>
+        
+        <script>
+            var x = document.getElementById("myButton");
+            x.addEventListener("click", myFunction);
+            x.addEventListener("click", someOtherFunction);
+
+            function myFunction() {
+                alert("Hello World!");
+            }
+
+            function someOtherFunction() {
+                alert("This is another function!");
+            }
+        </script>
+    </body>
+</html>
